@@ -269,6 +269,8 @@ section {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
+  margin-bottom: 0
+  ;   
 }
 
 #breaking-news h2 {

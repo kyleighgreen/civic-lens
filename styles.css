@@ -190,23 +190,312 @@ body.dark-mode {
 }
 
 /* ///ADD/// Navigation Styles */
+.mobile-nav {
+  margin-top: 16px;
+}
+
+.menu-button {
+  display: inline-block;
+  background-color: #E63946;
+  color: #F1FAEE;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: bold;
+}
+
+.menu {
+  display: none;
+  margin-top: 8px;
+}
+
+#menu-toggle:checked .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.menu a,
+footer nav a {
+  display: inline-block;
+  background-color: #E63946;
+  color: #F1FAEE;
+  padding: 8px 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  transition: all 0.5s ease;
+}
+
+.menu a:hover,
+.menu a:focus,
+footer nav a:hover,
+footer nav a:focus {
+  background-color: #F1FAEE;
+  color: #1D3557;
+}
 
 /* ///ADD/// Global Layout Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+  line-height: 1.5;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  background-color: #1D3557;
+  color: #F1FAEE;
+  padding: 24px;
+}
+
+main {
+  padding: 24px;
+}
+
+section {
+  margin-bottom: 32px;
+}
+
+#breaking-news {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+#breaking-news h2 {
+  grid-column: 1 / -1;
+}
+
+#breaking-news article {
+  background-color: #E63946;
+  color: #F1FAEE;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+video {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 16px;
+}
+
+#featured-articles {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+#featured-articles h2 {
+  grid-column: 1 / -1;
+}
+
+#featured-articles article {
+  border: 1px solid #457B9D;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+form {
+  background-color: #E63946;
+  color: #F1FAEE;
+  padding: 16px;
+  margin-top: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+form>label {
+  display: block;
+  margin-top: 12px;
+}
+
+input[type="text"],
+input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #333;
+}
+
+fieldset {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #F1FAEE;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+}
+
+legend {
+  padding: 0 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+input[type="submit"] {
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+  background-color: #1D3557;
+  color: #F1FAEE;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+footer {
+  background-color: #1D3557;
+  color: #F1FAEE;
+  padding: 24px;
+}
+
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 24px;
+}
+
 
 /* ///ADD/// Global Text Styles */
+h1,
+h2,
+h3 {
+  font-family: 'Merriweather', serif;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.tagline {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 16px;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+p {
+  margin-bottom: 12px;
+}
+
+a {
+  color: inherit;
+}
 
 
 /* ///ADD/// medium styles 620px */
+@media screen and (min-width: 620px) {
+
+  #breaking-news {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #featured-articles {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  fieldset {
+    grid-template-columns: auto 1fr auto 1fr;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
 
 
 /* ///ADD/// large styles 920px */
+@media screen and (min-width: 920px) {
+
+  header,
+  main,
+  footer {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  #featured-articles {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  form {
+    max-width: 900px;
+  }
+}
 
 
 /* ///ADD/// x-large styles 1024px */
+@media screen and (min-width: 1024px) {
 
+  #featured-articles {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+}
 
 /* ///ADD/// Interaction Queries for color scheme light and dark and motion preference */
+@media (prefers-color-scheme: dark) {
+  body:.dark-mode {
+    background-color: #333;
+    color: #F1FAEE;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body:.light-mode {
+    background-color: #F1FAEE;
+    color: #333;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    transition: none;
+    animation: none;
+    scroll-behavior: auto;
+  }
+}
 
 
 /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
-@supports (selector(:has(*))) {}
+@supports (selector(:has(*))) {
+  .mobile-nav:has(#menu-toggle:checked) .menu {
+    display: flex;
+  }
+}

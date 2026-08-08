@@ -466,6 +466,10 @@ a {
   }
 }
 
+form {
+  max-width: 1024px;
+}
+
 /* ///ADD/// Interaction Queries for color scheme light and dark and motion preference */
 @media (prefers-color-scheme: dark) {
   body:not(.light-mode) {

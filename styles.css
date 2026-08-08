@@ -286,12 +286,8 @@ section {
   padding: 16px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   min-width: 0;
-  transition: transform 0.2s ease;
 }
 
-#breaking-news article: hover {
-  transform: scale(1.05);
-}
 
 video {
   display: block;

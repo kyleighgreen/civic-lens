@@ -289,7 +289,7 @@ section {
   transition: transform 0.2s ease;
 }
 
-#breaking-news article {
+#breaking-news article: hover {
   transform: scale(1.05);
 }
 

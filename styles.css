@@ -244,8 +244,8 @@ footer nav a:focus {
 body {
   font-family: "Source Sans 3", sans-serif;
   line-height: 1.5;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
 }
 
 header {
@@ -256,7 +256,9 @@ header {
 }
 
 main {
-  padding: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px;
 }
 
 section {

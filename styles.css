@@ -269,9 +269,11 @@ section {
   gap: 16px;
 }
 
-#breaking-news h2 {
+#breaking-news h2,
+#breaking-news h3 {
   grid-column: 1 / -1;
 }
+
 
 #breaking-news article {
   background-color: #E63946;
